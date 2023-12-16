@@ -9,14 +9,14 @@ const testData1: number[] = Array.from({ length: 10000 }, () =>
 const testData2: number[] = Array.from({ length: 10000 }, (_, index) => index);
 
 // Log the array to the console
-console.log("here", testData2);
+// console.log("here", testData2);
 
 
-// for (let i = 0; i <= 5; i++) {
-//   for (let j = 5; j >= 0; j--) {
-//     console.log(i, j);
-//   }
-// }
+for (let i = 0; i <= 5; i++) {
+  for (let j = 5; j >= 0; j--) {
+    console.log(i, j);
+  }
+}
 
 // console.time("code");
 // const sort = (arr: number[]) => {

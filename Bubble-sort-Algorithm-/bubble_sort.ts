@@ -14,25 +14,24 @@ const testData2: number[] = Array.from({ length: 10000 }, (_, index) => index);
 for (let i = 0; i <= 5; i++) {
   // Inner loop: Iterates from j=5 to j=0 (inclusive) in reverse order
   for (let j = 5; j >= 0; j--) {
-    // Log the current values of i and j to the console
-    console.log(i, j);
+    // console.log(i, j);
   }
 }
 
-// console.time("code");
-// const sort = (arr: number[]) => {
-//   for (let i = 0; i < arr.length; i++) {
-//     for (let j = 0; j < arr.length; j++) {
-//       if (arr[j] > arr[i]) {
-//         let rev: number = arr[i];
-//         arr[i] = arr[j];
-//         arr[j] = rev;
-//       }
-//     }
-//   }
-//   return arr;
-// };
+const sort = (arr: number[]) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[i]) {
+        let rev: number = arr[i];
+        arr[i] = arr[j];
+        arr[j] = rev;
+      }
+    }
+  }
+  return arr;
+};
 
+console.log("here", sort(testData1));
 // console.log(sort([9, 7, 5, 6, 4, 2, 3, 1]));
 
 // const end: any = new Date();

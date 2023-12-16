@@ -1,8 +1,14 @@
+// Generate Random number 
 const testData1: number[] = Array.from({ length: 10000 }, () =>
   Math.floor(Math.random() * 1000)
 );
 
-console.log("here", testData1);
+// console.log("here", testData1);
+
+const testData2: number[] = Array.from({ length: 10000 }, (_, index) => index);
+
+console.log("here", testData2);
+
 
 // for (let i = 0; i <= 5; i++) {
 //   for (let j = 5; j >= 0; j--) {

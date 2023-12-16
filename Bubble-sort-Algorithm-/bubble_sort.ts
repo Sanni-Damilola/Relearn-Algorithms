@@ -3,7 +3,6 @@ const testData1: number[] = Array.from({ length: 10000 }, () =>
   Math.floor(Math.random() * 1000)
 );
 
-// Uncomment the line below to log the array to the console
 // console.log("here", testData1);
 
 // Generate an array of numbers from 0 to 9999 (inclusive)

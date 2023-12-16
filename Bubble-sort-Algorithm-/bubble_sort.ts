@@ -8,12 +8,13 @@ const testData1: number[] = Array.from({ length: 10000 }, () =>
 // Generate an array of numbers from 0 to 9999 (inclusive)
 const testData2: number[] = Array.from({ length: 10000 }, (_, index) => index);
 
-// Log the array to the console
 // console.log("here", testData2);
 
-
+// Outer loop: Iterates from i=0 to i=5 (inclusive)
 for (let i = 0; i <= 5; i++) {
+  // Inner loop: Iterates from j=5 to j=0 (inclusive) in reverse order
   for (let j = 5; j >= 0; j--) {
+    // Log the current values of i and j to the console
     console.log(i, j);
   }
 }

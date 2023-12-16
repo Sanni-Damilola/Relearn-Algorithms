@@ -1,11 +1,6 @@
-const testData1: number[] = [];
-
-Array.apply(null, { length: 10000 }).map((el) => {
-  if (el === undefined) {
-    el = Math.floor(Math.random() * 1000);
-    testData1.push(el);
-  }
-});
+const testData1: number[] = Array.from({ length: 10000 }, () =>
+  Math.floor(Math.random() * 1000)
+);
 
 console.log("here", testData1);
 

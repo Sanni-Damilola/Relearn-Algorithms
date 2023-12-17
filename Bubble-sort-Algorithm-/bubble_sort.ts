@@ -18,13 +18,21 @@ for (let i = 0; i <= 5; i++) {
   }
 }
 
-
 const sortArr = (arr: number[]) => {
-  
-}
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[i]) {
+        let reverse: number = arr[i];
+        arr[i] = arr[j];
+        arr[j] = reverse;
+      }
+    }
+  }
+  return arr;
+};
 
-// // console.log("here", sort(testData1));
-// console.log(sort([9, 7, 5, 6, 4, 2, 3, 1]));
+console.log("here", sortArr(testData1));
+// console.log(sortArr([9, 7, 5, 6, 4, 2, 3, 1]));
 
 // const end: any = new Date();
 

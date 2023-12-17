@@ -31,8 +31,8 @@ const sort = (arr: number[]) => {
   return arr;
 };
 
-console.log("here", sort(testData1));
-// console.log(sort([9, 7, 5, 6, 4, 2, 3, 1]));
+// console.log("here", sort(testData1));
+console.log(sort([9, 7, 5, 6, 4, 2, 3, 1]));
 
 // const end: any = new Date();
 

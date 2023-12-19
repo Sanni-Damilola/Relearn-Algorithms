@@ -34,15 +34,19 @@ for (let i = 0; i <= 5; i++) {
 const sortArr = (arr: number[]): number[] | void => {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
-      console.log("arri", arr[i]);
-      console.log("arrj", arr[j]);
+      if (arr[j] > arr[i]) {
+        let reverse: number = arr[i];
+        arr[i] = arr[j];
+        console.log("arri", i);
+        console.log("arrj", j);
+      }
     }
   }
   return arr;
 };
 
 // console.log("here", sortArr(testData1));
-console.log(sortArr([1, 3, 4]));
+console.log(sortArr([7, 4]));
 
 // const end: any = new Date();
 

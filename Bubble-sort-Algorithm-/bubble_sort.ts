@@ -43,7 +43,7 @@ const sortArr = (arr: number[]): number[] | void => {
 };
 
 // console.log("here", sortArr(testData1));
-console.log(sortArr([7, 4]));
+console.log(sortArr([3, 2, 1]));
 
 // const end: any = new Date();
 

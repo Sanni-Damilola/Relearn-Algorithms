@@ -18,17 +18,23 @@ for (let i = 0; i <= 5; i++) {
   }
 }
 
-const sortArr = (arr: number[]) => {
+// const sortArr = (arr: number[]) => {
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[j] > arr[i]) {
+//         let reverse: number = arr[i];
+//         arr[i] = arr[j];
+//         arr[j] = reverse;
+//       }
+//     }
+//   }
+//   return arr;
+// };
+
+const sortArr = (arr: number[]): number[] | void => {
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[i]) {
-        let reverse: number = arr[i];
-        arr[i] = arr[j];
-        arr[j] = reverse;
-      }
-    }
+    console.log("i", i);
   }
-  return arr;
 };
 
 // console.log("here", sortArr(testData1));

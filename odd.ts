@@ -16,11 +16,8 @@ const odd = (value: number[]) => {
 
 // 2
 const getOddNumbers = (numbers: number[]): number[] => {
-  // Use Array.filter to create a new array containing only odd numbers
   const oddNumbers = numbers.filter((number) => number % 2 !== 0);
 
   return oddNumbers;
 };
-
-
-console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));
+// console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));

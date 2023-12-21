@@ -1,3 +1,4 @@
+// 1
 const odd = (value: number[]) => {
   let hold: number[] = [];
 
@@ -6,15 +7,20 @@ const odd = (value: number[]) => {
       hold.push(el);
     }
   });
-  for (let i = 0; i <= value.length; i++) {
-    if (i % 2 !== 0) {
-      hold.push(i);
-    }
-  }
 
   // return hold;
 
   return hold;
 };
+// console.log(odd([1, 2, 3, 4, 5, 67, 8]));
 
-console.log(odd([1, 2, 3, 4, 5, 67, 8]));
+// 2
+const getOddNumbers = (numbers: number[]): number[] => {
+  // Use Array.filter to create a new array containing only odd numbers
+  const oddNumbers = numbers.filter((number) => number % 2 !== 0);
+
+  return oddNumbers;
+};
+
+
+console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));

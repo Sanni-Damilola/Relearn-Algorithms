@@ -20,7 +20,6 @@ for (let i = 0; i <= 5; i++) {
 
 // 1
 const sortArr1 = (arr: number[]): number[] | void => {
-  console.log("arr", arr);
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
       if (arr[j] > arr[i]) {
@@ -34,24 +33,23 @@ const sortArr1 = (arr: number[]): number[] | void => {
 };
 
 // console.log("here", sortArr1(testData1));
-// console.log(sortArr2([3, 2, 1]));
+// console.log(sortArr1([3, 2, 1]));
 
-const sortArr2 = (arr: number[]): number[] => {
-  const sortedArr = [...arr]; // Create a copy to avoid modifying the original array
-  console.log("Original array:", sortedArr);
+// 2
+const sortArr2 = (arr: number[]): number[] | void => {
+  const sortedArr = [...arr];
 
   for (let i = 0; i < sortedArr.length; i++) {
     for (let j = 0; j < sortedArr.length - 1 - i; j++) {
       if (sortedArr[j] > sortedArr[j + 1]) {
-        [sortedArr[j], sortedArr[j + 1]] = [sortedArr[j + 1], sortedArr[j]]; // Use destructuring to swap elements
+        [sortedArr[j], sortedArr[j + 1]] = [sortedArr[j + 1], sortedArr[j]];
       }
     }
   }
 
-  console.log("Sorted array:", sortedArr);
   return sortedArr;
 };
 
-// console.log("here", sortArr1(testData1));
-// console.log(sortArr2([3, 2, 1]));
+// console.log("here", sortArr2(testData1));
+console.log("here", sortArr2([3, 2, 1]););
 

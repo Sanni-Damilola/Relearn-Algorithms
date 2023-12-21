@@ -6,11 +6,11 @@ const odd = (value: number[]) => {
       hold.push(el);
     }
   });
-  // for (let i = 0; i <= value; i++) {
-  //   if(i % 2 !== 0) {
-  //     hold.push(i)
-  //   }
-  // }
+  for (let i = 0; i <= value.length; i++) {
+    if (i % 2 !== 0) {
+      hold.push(i);
+    }
+  }
 
   // return hold;
 

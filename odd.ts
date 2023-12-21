@@ -6,12 +6,6 @@ const odd = (value: number[]) => {
       hold.push(el);
     }
   });
-
-  // value.forEach((el) => {
-  //   if (el % 2 !== 0) {
-  //     hold.push(el)
-  //   }
-  // })
   // for (let i = 0; i <= value; i++) {
   //   if(i % 2 !== 0) {
   //     hold.push(i)

@@ -1,11 +1,11 @@
-const odd = (value : number[]) => {
+const odd = (value: number[]) => {
   let hold: number[] = [];
 
-  // value.forEach((el) => {
-  //   if (el % 2 !== 0) {
-  //     hold.push(el);
-  //   }
-  // });
+  value.forEach((el) => {
+    if (el % 2 !== 0) {
+      hold.push(el);
+    }
+  });
 
   // value.forEach((el) => {
   //   if (el % 2 !== 0) {
@@ -21,6 +21,6 @@ const odd = (value : number[]) => {
   // return hold;
 
   return hold;
-}
+};
 
-console.log(odd([1,2,3,4,5,67,8,]));
+console.log(odd([1, 2, 3, 4, 5, 67, 8]));

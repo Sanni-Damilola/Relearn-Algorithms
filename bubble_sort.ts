@@ -51,5 +51,4 @@ const sortArr2 = (arr: number[]): number[] | void => {
 };
 
 // console.log("here", sortArr2(testData1));
-console.log("here", sortArr2([3, 2, 1]););
-
+console.log("here", sortArr2([3, 2, 1]));

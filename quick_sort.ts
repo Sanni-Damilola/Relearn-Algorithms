@@ -1,21 +1,21 @@
-// const Setin = (arr: number[], value: number) => {
-//     let res:number[][] = []
-//     let hashtable:number[] = []
+const Setin = (arr: number[], value: number) => {
+  let res: number[][] = [];
+  let hashtable: number[] = [];
 
-//     for (let i = 0; i < arr.length; i++){
-//         let counting: number = arr[i]
-//         let count =
+  for (let i = 0; i < arr.length; i++) {
+    let counting: number = arr[i];
+    let count;
 
-//         if (hashtable.indexOf(counting) > -1){
-//             res.push([counting, count])
-//         } else {
-//             hashtable.push(counting)
-//         }
-//     }
-//     return res
-// }
+    if (hashtable.indexOf(counting) > -1) {
+      res.push([counting, count]);
+    } else {
+      hashtable.push(counting);
+    }
+  }
+  return res;
+};
 
-// console.log(Setin([7, 3, 0, 4], 7))
+console.log(Setin([7, 3, 0, 4], 7));
 
 //         //  MERGE SORT
 
@@ -109,43 +109,43 @@
 
 // console.log("SWAP: ", OurStart)
 
-const OurStart = (
-  arr: number[],
-  start: number = 0,
-  end: number = arr.length + 1
-) => {
-  const swap = (arr: number[], i: number, j: number) => {
-    let temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-  };
+// const OurStart = (
+//   arr: number[],
+//   start: number = 0,
+//   end: number = arr.length + 1
+// ) => {
+//   const swap = (arr: number[], i: number, j: number) => {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//   };
 
-  let pivot = arr[start];
-  let idx = start;
+//   let pivot = arr[start];
+//   let idx = start;
 
-  for (let i = start + 1; i < arr.length; i++) {
-    if (pivot > arr[i]) {
-      idx++;
-      swap(arr, idx, i);
-    }
-  }
+//   for (let i = start + 1; i < arr.length; i++) {
+//     if (pivot > arr[i]) {
+//       idx++;
+//       swap(arr, idx, i);
+//     }
+//   }
 
-  swap(arr, start, idx);
-  return idx;
-};
+//   swap(arr, start, idx);
+//   return idx;
+// };
 
-const OurQuickSort = (
-  arr: number[],
-  start: number = 0,
-  end: number = arr.length - 1
-) => {
-  if (start < end) {
-    let pivotIDX = OurStart(arr, start, end);
-    OurQuickSort(arr, start, pivotIDX - 1);
-    OurQuickSort(arr, pivotIDX + 1, end);
-  }
+// const OurQuickSort = (
+//   arr: number[],
+//   start: number = 0,
+//   end: number = arr.length - 1
+// ) => {
+//   if (start < end) {
+//     let pivotIDX = OurStart(arr, start, end);
+//     OurQuickSort(arr, start, pivotIDX - 1);
+//     OurQuickSort(arr, pivotIDX + 1, end);
+//   }
 
-  return arr;
-};
+//   return arr;
+// };
 
-console.log("QuickSort: ", OurQuickSort([1, 3, 7, 2, 9, 15, 8, 12]));
+// console.log("QuickSort: ", OurQuickSort([1, 3, 7, 2, 9, 15, 8, 12]));

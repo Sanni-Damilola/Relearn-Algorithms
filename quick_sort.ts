@@ -17,62 +17,61 @@ const setIn = (arr: number[], value: number): number[][] => {
 
 // console.log(setIn([7, 3, 0, 4], 5));
 
-//         //  MERGE SORT
+//  MERGE SORT
 
 // console.time("")
 
-// const merge = (arr1: number[], arr2: number[]) => {
-//     let res: number[] = []
-//     let i: number = 0
-//     let j: number = 0
+const merge = (arr1: number[], arr2: number[]) => {
+  let res: number[] = [];
+  let i: number = 0;
+  let j: number = 0;
 
-//     while(i < arr1.length && j < arr2.length){
-//         if(arr2[j] > arr1[i]){
-//             res.push(arr1[i])
-//             i++
-//         } else {
-//             res.push(arr2[j])
-//             j++
-//         }
-//     }
+  while (i < arr1.length && j < arr2.length) {
+    if (arr2[j] > arr1[i]) {
+      res.push(arr1[i]);
+      i++;
+    } else {
+      res.push(arr2[j]);
+      j++;
+    }
+  }
 
-//     while(i < arr1.length){
-//         res.push(arr1[i])
-//         i++
-//     }
+  while (i < arr1.length) {
+    res.push(arr1[i]);
+    i++;
+  }
 
-//     while(j < arr2.length){
-//         res.push(arr2[j])
-//         j++
-//     }
+  while (j < arr2.length) {
+    res.push(arr2[j]);
+    j++;
+  }
 
-//     return res
-// }
+  return res;
+};
 
-// const OurSort = (arr:number[]) => {
-//     if(arr.length <= 1){
-//         return arr
-//     }
-
-//     let mid: number = Math.floor(arr.length/2)
-//     let left = OurSort(arr.slice(0, mid))
-//     let right = OurSort(arr.slice(mid))
-
-//     const testData2: number[] = [];
-
-// Array.apply(null, { length: 10000 }).map((el) => {
-//   if (el === undefined) {
-//     el = Math.floor(Math.random() * 100000);
-//     testData2.push(el);
+// const OurSort = (arr: number[]) => {
+//   if (arr.length <= 1) {
+//     return arr;
 //   }
-// });
 
-//     return merge(left, right)
+//   let mid: number = Math.floor(arr.length / 2);
+//   let left = OurSort(arr.slice(0, mid));
+//   let right = OurSort(arr.slice(mid));
 
-// }
-// console.log(merge([1, 3, 0], [7, 2, 9]))
-// console.log(OurSort([1, 3, 0, 7, 2, 9, 15, 8, 12]))
-// console.log(merge(testData1))
+//   const testData2: number[] = [];
+
+//   Array.apply(null, { length: 10000 }).map((el) => {
+//     if (el === undefined) {
+//       el = Math.floor(Math.random() * 100000);
+//       testData2.push(el);
+//     }
+//   });
+
+//   return merge(left, right);
+// };
+// console.log(merge([1, 3, 0], [7, 2, 9]));
+// console.log(OurSort([1, 3, 0, 7, 2, 9, 15, 8, 12]));
+// console.log(merge(testData1));
 
 // const OurStart = (arr: number[], start: number=0, end: number = arr.length + 1) => {
 //     const swap = (arr: number[], i:number, j:number) => {

@@ -1,21 +1,21 @@
-const Setin = (arr: number[], value: number) => {
-  let res: number[][] = [];
-  let hashtable: number[] = [];
+const setIn = (arr: number[], value: number): number[][] => {
+  const res: number[][] = [];
+  const hashtable: { [key: number]: number } = {};
 
   for (let i = 0; i < arr.length; i++) {
-    let counting: number = arr[i];
-    let count;
+    const counting: number = arr[i];
 
-    if (hashtable.indexOf(counting) > -1) {
-      res.push([counting, count]);
+    if (hashtable[counting] !== undefined) {
+      res.push([counting, hashtable[counting]]);
     } else {
-      hashtable.push(counting);
+      hashtable[value - counting] = counting;
     }
   }
+
   return res;
 };
 
-console.log(Setin([7, 3, 0, 4], 7));
+console.log(setIn([7, 3, 0, 4], 7));
 
 //         //  MERGE SORT
 

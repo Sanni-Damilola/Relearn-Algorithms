@@ -15,7 +15,7 @@ const setIn = (arr: number[], value: number): number[][] => {
   return res;
 };
 
-console.log(setIn([7, 3, 0, 4], 7));
+// console.log(setIn([7, 3, 0, 4], 5));
 
 //         //  MERGE SORT
 

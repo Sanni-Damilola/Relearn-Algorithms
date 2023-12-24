@@ -21,3 +21,4 @@ const getOddNumbers = (numbers: number[]): number[] => {
   return oddNumbers;
 };
 // console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));
+

@@ -1,3 +1,5 @@
+import { generateRandomArray } from "./utils";
+
 const setIn = (arr: number[], value: number): number[][] => {
   const res: number[][] = [];
   const hashtable: { [key: number]: number } = {};
@@ -96,15 +98,6 @@ const partition = (arr: number[], start: number, end: number): number => {
   swap(arr, start, idx);
   return idx;
 }; // Measure time for Merge Sort
-
-//  Utility function to generate an array of random numbers
-const generateRandomArray = (size: number): number[] => {
-  const randomArray: number[] = [];
-  for (let i = 0; i < size; i++) {
-    randomArray.push(Math.floor(Math.random() * size));
-  }
-  return randomArray;
-};
 
 console.time("Merge Sort");
 mergeSort(generateRandomArray(10000000));

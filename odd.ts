@@ -1,3 +1,5 @@
+import { generateRandomArray } from "./utils";
+
 // 1
 const odd = (value: number[]) => {
   let hold: number[] = [];
@@ -22,3 +24,5 @@ const getOddNumbers = (numbers: number[]): number[] => {
 };
 // console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));
 
+console.time("odd");
+odd(generateRandomArray(100000));

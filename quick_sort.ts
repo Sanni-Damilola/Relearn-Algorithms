@@ -107,10 +107,10 @@ const generateRandomArray = (size: number): number[] => {
 };
 
 console.time("Merge Sort");
-mergeSort(generateRandomArray(10000));
+mergeSort(generateRandomArray(10000000000000));
 console.timeEnd("Merge Sort");
 
 // Measure time for Quick Sort
 console.time("Quick Sort");
-quickSort(generateRandomArray(10000));
+quickSort(generateRandomArray(10000000000000));
 console.timeEnd("Quick Sort");

@@ -26,10 +26,10 @@ const getOddNumbers = (numbers: number[]): number[] => {
 
 // Measure time for odd
 console.time("odd");
-odd(generateRandomArray(10000000));
+odd(generateRandomArray(1000000000));
 console.timeEnd("odd");
 
 // Measure time for getOddNumbers
 console.time("getOddNumbers");
-getOddNumbers(generateRandomArray(10000000));
+getOddNumbers(generateRandomArray(1000000000));
 console.timeEnd("getOddNumbers");

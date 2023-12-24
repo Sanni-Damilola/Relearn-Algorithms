@@ -24,5 +24,12 @@ const getOddNumbers = (numbers: number[]): number[] => {
 };
 // console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));
 
+// Measure time for odd
 console.time("odd");
 odd(generateRandomArray(100000));
+console.timeEnd("odd");
+
+// Measure time for getOddNumbers
+console.time("odd");
+odd(generateRandomArray(100000));
+console.timeEnd("odd");

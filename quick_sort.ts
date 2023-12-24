@@ -61,7 +61,11 @@ const mergeSort = (arr: number[]): number[] => {
 };
 
 // Quick Sort implementation
-const quickSort = (arr: number[], start: number = 0, end: number = arr.length - 1): number[] => {
+const quickSort = (
+  arr: number[],
+  start: number = 0,
+  end: number = arr.length - 1
+): number[] => {
   if (start < end) {
     const pivotIdx: number = partition(arr, start, end);
     quickSort(arr, start, pivotIdx - 1);
@@ -91,8 +95,22 @@ const partition = (arr: number[], start: number, end: number): number => {
 
   swap(arr, start, idx);
   return idx;
+}; // Measure time for Merge Sort
+
+//  Utility function to generate an array of random numbers
+const generateRandomArray = (size: number): number[] => {
+  const randomArray: number[] = [];
+  for (let i = 0; i < size; i++) {
+    randomArray.push(Math.floor(Math.random() * size));
+  }
+  return randomArray;
 };
 
-// Example usage
-console.log("Merge Sort: ", mergeSort([1, 3, 0, 7, 2, 9, 15, 8, 12]));
-console.log("Quick Sort: ", quickSort([1, 3, 7, 2, 9, 15, 8, 12]));
+console.time("Merge Sort");
+mergeSort(generateRandomArray(10000));
+console.timeEnd("Merge Sort");
+
+// Measure time for Quick Sort
+console.time("Quick Sort");
+quickSort(generateRandomArray(10000));
+console.timeEnd("Quick Sort");

@@ -30,6 +30,6 @@ odd(generateRandomArray(10000000));
 console.timeEnd("odd");
 
 // Measure time for getOddNumbers
-console.time("odd");
+console.time("getOddNumbers");
 getOddNumbers(generateRandomArray(10000000));
-console.timeEnd("odd");
+console.timeEnd("getOddNumbers");

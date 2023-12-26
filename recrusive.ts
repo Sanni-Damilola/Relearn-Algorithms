@@ -13,4 +13,4 @@ const RecursiveMethod = (arr: number[], value: number) => {
   }
   return false;
 };
-console.log(RecursiveMethod([1, 4, 6, 8, 29], 1));
+// console.log(RecursiveMethod([1, 4, 6, 8, 29], 1));

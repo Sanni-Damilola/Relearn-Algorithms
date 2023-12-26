@@ -19,16 +19,6 @@ export const generateRandomArray2: number[] = Array.from(
   (_, index) => index
 );
 
-// Measure time for generateRandomArray3
-const generateRandomArray3Start = performance.now();
-generateRandomArray3(10000);
-const generateRandomArray3End = performance.now();
-console.log(
-  "generateRandomArray3 Time:",
-  generateRandomArray3End - generateRandomArray3Start,
-  "milliseconds"
-);
-
 // Measure time for generateRandomArray1
 const generateRandomArray1Start = performance.now();
 generateRandomArray1;
@@ -37,14 +27,25 @@ console.log(
   "generateRandomArray1 Time:",
   generateRandomArray1End - generateRandomArray1Start,
   "milliseconds"
-);
+  );
 
-// Measure time for generateRandomArray2
-const generateRandomArray2Start = performance.now();
-generateRandomArray2;
-const generateRandomArray2End = performance.now();
-console.log(
-  "generateRandomArray2 Time:",
-  generateRandomArray2End - generateRandomArray2Start,
-  "milliseconds"
-);
+  // Measure time for generateRandomArray2
+  const generateRandomArray2Start = performance.now();
+  generateRandomArray2;
+  const generateRandomArray2End = performance.now();
+  console.log(
+    "generateRandomArray2 Time:",
+    generateRandomArray2End - generateRandomArray2Start,
+    "milliseconds"
+    );
+    
+    
+    // Measure time for generateRandomArray3
+    const generateRandomArray3Start = performance.now();
+    generateRandomArray3(10000);
+    const generateRandomArray3End = performance.now();
+    console.log(
+      "generateRandomArray3 Time:",
+      generateRandomArray3End - generateRandomArray3Start,
+      "milliseconds"
+    );

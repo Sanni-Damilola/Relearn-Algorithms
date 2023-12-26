@@ -1,7 +1,7 @@
-import { generateRandomArray } from "./utils";
+import { generateRandomArray3 } from "./utils";
 
 // 1
-const odd = (value: number[]) => {
+const odd = (value: number[]): number[] => {
   let hold: number[] = [];
 
   value.forEach((el) => {
@@ -10,11 +10,8 @@ const odd = (value: number[]) => {
     }
   });
 
-  // return hold;
-
   return hold;
 };
-// console.log(odd([1, 2, 3, 4, 5, 67, 8]));
 
 // 2
 const getOddNumbers = (numbers: number[]): number[] => {
@@ -22,14 +19,13 @@ const getOddNumbers = (numbers: number[]): number[] => {
 
   return oddNumbers;
 };
-// console.log(getOddNumbers([1, 2, 3, 4, 5, 67, 8]));
 
 // Measure time for odd
 console.time("odd");
-odd(generateRandomArray(10000000));
+odd(generateRandomArray3(10000000));
 console.timeEnd("odd");
 
 // Measure time for getOddNumbers
 console.time("getOddNumbers");
-getOddNumbers(generateRandomArray(10000000));
+getOddNumbers(generateRandomArray3(10000000));
 console.timeEnd("getOddNumbers");

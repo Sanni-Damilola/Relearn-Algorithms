@@ -1,12 +1,6 @@
-// Nested Loop
-// Iterates from i=0 to i=5 (inclusive) and j=5 to j=0 (inclusive) in reverse order
-for (let i = 0; i <= 5; i++) {
-  for (let j = 5; j >= 0; j--) {
-    // console.log(i, j);
-  }
-}
+import { generateRandomArray3 } from "./utils";
 
-// 1
+// Sorting function 1: Bubble Sort
 const bubbleSort = (arr: number[]): number[] => {
   const n = arr.length;
 
@@ -21,7 +15,7 @@ const bubbleSort = (arr: number[]): number[] => {
   return arr;
 };
 
-// 2
+// Sorting function 2: Optimized Bubble Sort
 const optimizedBubbleSort = (arr: number[]): number[] => {
   const n = arr.length;
 
@@ -44,8 +38,15 @@ const optimizedBubbleSort = (arr: number[]): number[] => {
   return arr;
 };
 
-// Usage example
-const testData: number[] = [3, 2, 1];
+// Generate an array of 10,000 random numbers using generateRandomArray3
+const testData: number[] = generateRandomArray3(10000);
 
-console.log("Bubble Sort:", bubbleSort(testData.slice()));
-console.log("Optimized Bubble Sort:", optimizedBubbleSort(testData.slice()));
+// Measure time for bubbleSort
+console.time("Bubble Sort");
+bubbleSort(testData.slice());
+console.timeEnd("Bubble Sort");
+
+// Measure time for optimizedBubbleSort
+console.time("Optimized Bubble Sort");
+optimizedBubbleSort(testData.slice());
+console.timeEnd("Optimized Bubble Sort");

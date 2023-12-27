@@ -1,43 +1,51 @@
-// Outer loop: Iterates from i=0 to i=5 (inclusive)
+// Nested Loop
+// Iterates from i=0 to i=5 (inclusive) and j=5 to j=0 (inclusive) in reverse order
 for (let i = 0; i <= 5; i++) {
-  // Inner loop: Iterates from j=5 to j=0 (inclusive) in reverse order
   for (let j = 5; j >= 0; j--) {
     // console.log(i, j);
   }
 }
 
 // 1
-const sortArr1 = (arr: number[]): number[] | void => {
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[j] > arr[i]) {
-        let reverse: number = arr[i];
-        arr[i] = arr[j];
-        arr[j] = reverse;
+const bubbleSort = (arr: number[]): number[] => {
+  const n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
       }
     }
   }
+
   return arr;
 };
 
-// console.log("here", sortArr1(testData1));
-// console.log(sortArr1([3, 2, 1]));
-
 // 2
-const sortArr2 = (arr: number[]): number[] | void => {
-  const sortedArr = [...arr];
+const optimizedBubbleSort = (arr: number[]): number[] => {
+  const n = arr.length;
 
-  for (let i = 0; i < sortedArr.length; i++) {
-    for (let j = 0; j < sortedArr.length - 1 - i; j++) {
-      if (sortedArr[j] > sortedArr[j + 1]) {
-        [sortedArr[j], sortedArr[j + 1]] = [sortedArr[j + 1], sortedArr[j]];
+  for (let i = 0; i < n; i++) {
+    let swapped = false;
+
+    for (let j = 0; j < n - 1 - i; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        swapped = true;
       }
+    }
+
+    // If no swapping occurred in the inner loop, the array is already sorted
+    if (!swapped) {
+      break;
     }
   }
 
-  return sortedArr;
+  return arr;
 };
 
-// console.log("here", sortArr2(testData1));
-// console.log("here", sortArr2([3, 2, 1]));
+// Usage example
+const testData: number[] = [3, 2, 1];
 
+console.log("Bubble Sort:", bubbleSort(testData.slice()));
+console.log("Optimized Bubble Sort:", optimizedBubbleSort(testData.slice()));

@@ -1,23 +1,25 @@
-let rev = 0;
-let num = 236784223;
-let c;
+// Reversing a Number
+let originalNumber = 236784223;
+let reversedNumber = 0;
 
-while (num != 0) {
-  // remember to sort
-  c = num % 10;
-  rev = rev * 10 + c;
-  num = Math.floor(num / 10);
+while (originalNumber !== 0) {
+  let digit = originalNumber % 10;
+  reversedNumber = reversedNumber * 10 + digit;
+  originalNumber = Math.floor(originalNumber / 10);
 }
-// console.log(rev);
 
+// console.log(reversedNumber);
 
-// const reverse1 = (x: number[]) => {
-//   for (let i = 0; i < x.length / 2; i++) {
-//     let rev = x[i];
-//     x[i] = x[x.length - 1 - i];
-//     x[x.length - 1 - i] = rev;
-//   }
-//   return x;
-// };
-// let arr_value: number[] = [1, 2, 3, 4];
-// console.log(reverse1(arr_value));
+// Reversing an Array
+const reverseArray = (arr: number[]): number[] => {
+  for (let i = 0; i < arr.length / 2; i++) {
+    // Swap elements symmetrically around the center
+    let temp = arr[i];
+    arr[i] = arr[arr.length - 1 - i];
+    arr[arr.length - 1 - i] = temp;
+  }
+  return arr;
+};
+
+let arrayToReverse: number[] = [1, 2, 3, 4];
+// console.log(reverseArray(arrayToReverse));

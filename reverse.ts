@@ -1,13 +1,16 @@
+import { generateRandomArray3 } from "./utils";
+
 // Reversing a Number
-let originalNumber = 236784223;
+let originalNumber = generateRandomArray3(1)[0];
 let reversedNumber = 0;
 
+console.time("Reverse Number");
 while (originalNumber !== 0) {
   let digit = originalNumber % 10;
   reversedNumber = reversedNumber * 10 + digit;
   originalNumber = Math.floor(originalNumber / 10);
 }
-
+console.timeEnd("Reverse Number");
 // console.log(reversedNumber);
 
 // Reversing an Array
@@ -21,5 +24,7 @@ const reverseArray = (arr: number[]): number[] => {
   return arr;
 };
 
-let arrayToReverse: number[] = [1, 2, 3, 4];
+let arrayToReverse: number[] = generateRandomArray3(10);
+console.time("Reverse Array");
 // console.log(reverseArray(arrayToReverse));
+console.timeEnd("Reverse Array");
